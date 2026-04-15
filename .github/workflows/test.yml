@@ -1,0 +1,18 @@
+name: Sample Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run reusable workflow
+        uses: ./.github/workflows/reusable_sample.yml
+        with:
+          arg1: "Hello"
+          arg2: "World"
