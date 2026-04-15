@@ -16,11 +16,15 @@ on:
 jobs:
   reusable_job:
     runs-on: ubuntu-latest
+    env:
+      ARG1: ${{ inputs.arg1 }}
+      ARG2: ${{ inputs.arg2 }}
+      ARG3: ${{ inputs.arg3 }}
     steps:
       - name: Print arguments
         uses: actions/github-script@v6
         with:
           script: |
-            console.log("Argument 1: " + "${{ inputs.arg1 }}");
-            console.log("Argument 2: " + "${{ inputs.arg2 }}");
-            console.log("Argument 3: " + "${{ inputs.arg3 }}");
+            console.log("Argument 1: " + process.env.ARG1);
+            console.log("Argument 2: " + process.env.ARG2);
+            console.log("Argument 3: " + process.env.ARG3);
