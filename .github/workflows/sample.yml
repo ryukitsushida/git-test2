@@ -5,8 +5,11 @@ on:
     branches: [master]
 
 jobs:
-  call_reusable:
+  call_reusable1:
     uses: ./.github/workflows/reusable_sample.yml
     with:
-      arg1: "Hello"
-      arg2: "World"
+      arg1: "Hello World!"
+      arg2: |
+        Hello World!
+      arg3: >-
+        Hello World!

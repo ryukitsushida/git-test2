@@ -9,6 +9,9 @@ on:
       arg2:
         required: true
         type: string
+      arg3:
+        required: true
+        type: string
 
 jobs:
   reusable_job:
@@ -20,3 +23,4 @@ jobs:
           script: |
             console.log("Argument 1: " + "${{ inputs.arg1 }}");
             console.log("Argument 2: " + "${{ inputs.arg2 }}");
+            console.log("Argument 3: " + "${{ inputs.arg3 }}");
