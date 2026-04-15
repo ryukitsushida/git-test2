@@ -11,6 +11,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: pwd
+        run: pwd
+
       - name: Run reusable workflow
         uses: ./.github/workflows/reusable_sample.yml
         with:
