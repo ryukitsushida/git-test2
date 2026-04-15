@@ -9,7 +9,7 @@ jobs:
     uses: ./.github/workflows/reusable_sample.yml
     with:
       arg1: "Hello World!"
-      arg2: |
+      arg2: |-
         Hello World!
       arg3: >-
         Hello World!
